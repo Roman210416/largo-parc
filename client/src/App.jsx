@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
 import mark from './assets/logo-mark.svg';
 import logoDark from './assets/logo-dark.svg';
-import f1 from './assets/foto1.jpg';
-import f2 from './assets/foto2.jpg';
-import f3 from './assets/foto3.jpg';
-import f4 from './assets/foto4.jpg';
-import f5 from './assets/foto5.jpg';
-import f6 from './assets/foto6.jpg';
-import f7 from './assets/foto7.jpg';
-import f8 from './assets/foto8.jpg';
-import f9 from './assets/foto9.jpg';
-import f10 from './assets/foto10.jpg';
-import f11 from './assets/foto11.jpg';
-import f12 from './assets/foto12.jpg';
-import f13 from './assets/foto13.jpg';
-import m1 from './assets/meniu1.jpg';
-import m2 from './assets/meniu2.jpg';
-import m3 from './assets/meniu3.jpg';
+import f1 from './assets/foto1.webp';
+import f2 from './assets/foto2.webp';
+import f3 from './assets/foto3.webp';
+import f4 from './assets/foto4.webp';
+import f5 from './assets/foto5.webp';
+import f6 from './assets/foto6.webp';
+import f7 from './assets/foto7.webp';
+import f8 from './assets/foto8.webp';
+import f9 from './assets/foto9.webp';
+import f10 from './assets/foto10.webp';
+import f11 from './assets/foto11.webp';
+import f12 from './assets/foto12.webp';
+import f13 from './assets/foto13.webp';
+import m1 from './assets/meniu1.webp';
+import m2 from './assets/meniu2.webp';
+import m3 from './assets/meniu3.webp';
 import { CHEIE_FORMULAR, contact, servicii, motive, meniu, pacheteImplicite } from './content.js';
 import Rezervare from './Rezervare.jsx';
 
@@ -49,7 +49,6 @@ export default function App() {
     if (!CHEIE_FORMULAR) fetch('/api/pachete').then((r) => (r.ok ? r.json() : Promise.reject()))
       .then((d) => Array.isArray(d) && d.length && setPachete(d)).catch(() => {});
     const onScroll = () => setSolid(window.scrollY > 60);
-    onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -90,7 +89,7 @@ export default function App() {
               <p className="lead">Ziua nunții este una dintre cele mai frumoase din viață. La Largo Event Park ne ocupăm de fiecare detaliu, pentru ca voi să vă puteți bucura de emoții, de cei dragi și unul de celălalt.</p>
               <p className="muted">Ascultăm povestea voastră, înțelegem ce vă doriți și transformăm totul într-un eveniment care vă reprezintă: elegant, bine organizat și plin de momente de neuitat.</p>
             </div>
-            <img className="foto foto--inalt" src={f4} alt="Sala de bal cu candelabru de cristal și mese aranjate" loading="lazy" />
+            <img className="foto foto--inalt" src={f4} alt="Sala de bal cu candelabru de cristal și mese aranjate" loading="lazy" decoding="async" />
           </div>
         </section>
 
@@ -108,7 +107,7 @@ export default function App() {
 
         <section className="sec">
           <div className="wrap split split--inv">
-            <img className="foto" src={f7} alt="Arcadă albă de ceremonie cu flori și pufuri verzi" loading="lazy" />
+            <img className="foto" src={f7} alt="Arcadă albă de ceremonie cu flori și pufuri verzi" loading="lazy" decoding="async" />
             <div>
               <p className="eyebrow">De ce să ne alegeți</p>
               <h2>Liniștea că totul este pe mâini bune</h2>
@@ -122,7 +121,7 @@ export default function App() {
             <p className="eyebrow">Galerie</p>
             <h2>Același loc, de fiecare dată altă poveste</h2>
             <div className="galerie__grid">
-              {galerie.map(([src, alt, forma]) => <img key={src} className={forma} src={src} alt={alt} loading="lazy" />)}
+              {galerie.map(([src, alt, forma]) => <img key={src} className={forma} src={src} alt={alt} loading="lazy" decoding="async" />)}
             </div>
           </div>
         </section>
@@ -151,9 +150,9 @@ export default function App() {
             <p className="eyebrow">Meniu</p>
             <h2>Un meniu ales la masă, nu de pe hârtie</h2>
             <div className="meniu__foto">
-              <img src={m1} alt="Masă festivă cu aperitive reci și aranjamente florale roz" loading="lazy" />
-              <img src={m2} alt="Platouri cu somon, creveți, salate și antreuri" loading="lazy" />
-              <img src={m3} alt="Bruschete și gustări la bufetul de întâmpinare" loading="lazy" />
+              <img src={m1} alt="Masă festivă cu aperitive reci și aranjamente florale roz" loading="lazy" decoding="async" />
+              <img src={m2} alt="Platouri cu somon, creveți, salate și antreuri" loading="lazy" decoding="async" />
+              <img src={m3} alt="Bruschete și gustări la bufetul de întâmpinare" loading="lazy" decoding="async" />
             </div>
             <div className="meniu__grid">
               {meniu.map((c) => (
