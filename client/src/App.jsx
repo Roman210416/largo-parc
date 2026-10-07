@@ -20,9 +20,6 @@ import m3 from './assets/meniu3.webp';
 import { CHEIE_FORMULAR, contact, servicii, motive, meniu, pacheteImplicite } from './content.js';
 import Rezervare from './Rezervare.jsx';
 
-// Poza de fundal stă în client/public și este preîncărcată din index.html
-const hero = window.matchMedia('(max-width: 700px)').matches ? 'hero-m.webp' : 'hero.webp';
-
 const nav = [['#top', 'Acasă'], ['#servicii', 'Servicii'], ['#galerie', 'Galerie'], ['#pachete', 'Pachete'], ['#rezervare', 'Rezervări']];
 // al treilea element: forma în grilă — 'mare' (2×2), 'inalt' (1×2), 'lat' (2×1) sau '' (1×1)
 const galerie = [
@@ -69,7 +66,7 @@ export default function App() {
       </header>
 
       <main id="top">
-        <section className="hero" style={{ backgroundImage: `url(${hero})` }}>
+        <section className="hero">
           <div className="hero__inner">
             <p className="eyebrow">Largo Event Park · Chișinău</p>
             <h1>Nunta ta, exact așa cum ai visat-o</h1>

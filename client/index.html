@@ -14,9 +14,33 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" /></noscript>
+    <!-- Poza de fundal: varianta mică pe telefon, cea mare pe ecrane late -->
+    <style>#root .hero{background-image:url(hero.webp)}@media (max-width:700px){#root .hero{background-image:url(hero-m.webp)}}</style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!-- Prima parte a paginii, afișată imediat; React o înlocuiește după ce se încarcă -->
+      <header class="nav">
+        <a href="#top" class="nav__brand" aria-label="Largo Event Park — acasă">
+          <svg width="46" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 60" fill="none" stroke="#C9A66B" stroke-linecap="round"><path d="M14 44V24a18 18 0 0 1 36 0v20M6 44h52" stroke-width="2.2"/><path d="M32 7v37M23 10v34M41 10v34M14 26h36M14 35h36" stroke-width="1.1"/><path d="M4 53c7-4 14-4 21 0s14 4 21 0 9-3 14-1" stroke-width="1.4"/></svg>
+          <span><span class="nav__name">LARGO</span><span class="nav__sub">Event Park</span></span>
+        </a>
+        <button class="nav__toggle" aria-expanded="false" aria-label="Meniu"><span></span><span></span></button>
+        <nav><a href="#top">Acasă</a><a href="#servicii">Servicii</a><a href="#galerie">Galerie</a><a href="#pachete">Pachete</a><a href="#rezervare">Rezervări</a></nav>
+      </header>
+      <main id="top">
+        <section class="hero">
+          <div class="hero__inner">
+            <p class="eyebrow">Largo Event Park · Chișinău</p>
+            <h1>Nunta ta, exact așa cum ai visat-o</h1>
+            <p>Organizăm nunți cu suflet, de la prima idee până la ultimul dans.</p>
+            <div class="hero__cta">
+              <a href="#rezervare" class="btn btn--gold">Rezervă data</a>
+              <a href="#servicii" class="btn btn--ghost">Serviciile noastre</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
