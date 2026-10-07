@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import hero from './assets/hero.jpg';
 import mark from './assets/logo-mark.svg';
 import logoDark from './assets/logo-dark.svg';
 import f1 from './assets/foto1.jpg';
@@ -20,6 +19,9 @@ import m2 from './assets/meniu2.jpg';
 import m3 from './assets/meniu3.jpg';
 import { CHEIE_FORMULAR, contact, servicii, motive, meniu, pacheteImplicite } from './content.js';
 import Rezervare from './Rezervare.jsx';
+
+// Poza de fundal stă în client/public și este preîncărcată din index.html
+const hero = window.matchMedia('(max-width: 700px)').matches ? 'hero-m.jpg' : 'hero.jpg';
 
 const nav = [['#top', 'Acasă'], ['#servicii', 'Servicii'], ['#galerie', 'Galerie'], ['#pachete', 'Pachete'], ['#rezervare', 'Rezervări']];
 // al treilea element: forma în grilă — 'mare' (2×2), 'inalt' (1×2), 'lat' (2×1) sau '' (1×1)
