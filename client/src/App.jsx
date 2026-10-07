@@ -21,7 +21,7 @@ import { CHEIE_FORMULAR, contact, servicii, motive, meniu, pacheteImplicite } fr
 import Rezervare from './Rezervare.jsx';
 
 // Poza de fundal stă în client/public și este preîncărcată din index.html
-const hero = window.matchMedia('(max-width: 700px)').matches ? 'hero-m.jpg' : 'hero.jpg';
+const hero = window.matchMedia('(max-width: 700px)').matches ? 'hero-m.webp' : 'hero.webp';
 
 const nav = [['#top', 'Acasă'], ['#servicii', 'Servicii'], ['#galerie', 'Galerie'], ['#pachete', 'Pachete'], ['#rezervare', 'Rezervări']];
 // al treilea element: forma în grilă — 'mare' (2×2), 'inalt' (1×2), 'lat' (2×1) sau '' (1×1)
