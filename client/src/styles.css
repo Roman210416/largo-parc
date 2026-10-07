@@ -182,3 +182,5 @@ p { margin: 0 0 1em; }
 .galerie__grid .mare { grid-column: span 2; grid-row: span 2; }
 .galerie__grid .inalt { grid-row: span 2; }
 .galerie__grid .lat { grid-column: span 2; }
+
+.servicii .eyebrow, .meniu .eyebrow { color: var(--gold-l); }
